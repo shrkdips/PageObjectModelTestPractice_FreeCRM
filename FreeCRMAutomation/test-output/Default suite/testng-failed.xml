@@ -5,6 +5,7 @@
     <classes>
       <class name="com.crm.qa.testcases.ContactsPageTest">
         <methods>
+          <include name="fillNewContactsFormTest"/>
           <include name="setUp"/>
           <include name="selectMultipleContactsTest"/>
           <include name="verifycontactsLabelTest"/>
