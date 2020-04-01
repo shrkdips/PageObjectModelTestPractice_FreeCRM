@@ -6,6 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.crm.qa.base.BaseTest;
 
+import io.qameta.allure.Step;
+
 public class LoginPage extends BaseTest
 {
 	//Page Factory - OR (Object Repo)
@@ -31,16 +33,19 @@ public class LoginPage extends BaseTest
 	}
 	
 	//Actions
+	@Step("Getting Login Page Title.....")
 	public String validateLoginPageTitle()
 	{
 		return driver.getTitle();
 	}
 	
+	@Step("Verify Logo In The Page.....")
 	public boolean validateCrmLogo()
 	{
 		return crmLogo.isDisplayed();
 	}
 	
+	@Step("........Login With Username : {0} and  Password : {1}........")
 	public HomePage login(String un, String pass)
 	{
 		username.sendKeys(un);
